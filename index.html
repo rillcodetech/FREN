@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akara Joint — freshly made akara, breakfast bundles and local favourites." />
+  <title>Akara Joint | Fresh. Local. Delicious.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">Fresh akara, made daily · Lagos, Nigeria</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Akara Joint home"><span class="brand-mark">AJ</span><span>akara<span class="brand-light">joint</span><small>FRESH. LOCAL. DELICIOUS.</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#menu">Our menu</a><a href="#story">Our story</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="cartButton" aria-label="Open cart">Bag <span id="cartCount" class="cart-count">0</span></button>
+      <button class="btn btn-outline" id="openSignIn">Sign in</button>
+      <button class="btn btn-dark" id="openSignUp">Create account</button>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEW BREAKFAST SPOT</span>
+        <h1>Good mornings<br>start with <em>akara.</em></h1>
+        <p>Golden, crispy on the outside, soft on the inside. Your favourite Nigerian street-food classic, made fresh and served with love.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#menu">Explore the menu <span>↗</span></a><a class="text-link" href="#story">Get to know us <span>→</span></a></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>👩🏽</span><span>👨🏿</span><span>👩🏾</span></div><div><strong>Made fresh every day</strong><small>Good food. Good mood. Every time.</small></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1100&q=85" alt="Fresh golden savoury snacks served on a plate"></div>
+        <div class="round-stamp"><span>100%</span><small>FRESH<br>DAILY</small></div>
+        <div class="image-caption"><span>01 / THE CLASSIC</span><strong>Golden goodness.</strong></div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span class="benefit-icon">✳</span><span><strong>Freshly prepared</strong><small>Made in small batches</small></span></div>
+      <div><span class="benefit-icon">♡</span><span><strong>Local ingredients</strong><small>Big flavour, close to home</small></span></div>
+      <div><span class="benefit-icon">⌁</span><span><strong>Easy ordering</strong><small>Choose your favourites</small></span></div>
+    </section>
+
+    <section class="menu-section section-wrap" id="menu">
+      <div class="section-heading"><div><span class="eyebrow">THE GOOD STUFF</span><h2>Made for your <em>cravings.</em></h2></div><p>From the classic akara you know to satisfying combos that make breakfast feel special.</p></div>
+      <div class="filter-row" id="filters"><button class="filter active" data-filter="all">All items</button><button class="filter" data-filter="akara">Akara</button><button class="filter" data-filter="combo">Combos</button><button class="filter" data-filter="drinks">Drinks</button></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="A colourful freshly prepared meal"></div>
+      <div class="story-copy"><span class="eyebrow">A LITTLE ABOUT US</span><h2>Rooted in tradition.<br><em>Made for today.</em></h2><p>Akara Joint celebrates the simple joy of a familiar favourite. We bring the warmth of a neighbourhood breakfast spot together with a clean, convenient way to order.</p><p>Whether it's a quick bite or a breakfast to share, there's always a fresh batch waiting.</p><a class="text-link" href="#contact">Come say hello <span>→</span></a></div>
+    </section>
+
+    <section class="cta-band" id="contact"><div><span class="eyebrow">YOUR NEXT FAVOURITE BITE</span><h2>Bring a little joy<br>to your table.</h2></div><a class="btn btn-cream" href="#menu">Order from our menu <span>↗</span></a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">AJ</span><span>akara<span class="brand-light">joint</span><small>FRESH. LOCAL. DELICIOUS.</small></span></a><p>© <span id="year"></span> Akara Joint. Made with care in Lagos.</p><div><a href="#menu">Menu</a><a href="#story">Our story</a><a href="mailto:hello@akarajoint.example">Email us</a></div></footer>
+
+  <div class="modal-backdrop" id="authModal" aria-hidden="true">
+    <section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" id="closeAuth" aria-label="Close">×</button>
+      <div class="modal-brand"><span class="brand-mark">AJ</span></div>
+      <span class="eyebrow">WELCOME TO THE JOINT</span><h2 id="authTitle">Good to have you.</h2><p id="authSubtitle">Sign in to continue to your account.</p>
+      <form id="authForm">
+        <div id="nameField" class="form-field hidden"><label for="fullName">Full name</label><input id="fullName" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="form-field"><label for="email">Email address</label><input id="email" type="email" placeholder="you@example.com" required autocomplete="email"></div>
+        <div class="form-field"><label for="password">Password</label><input id="password" type="password" placeholder="At least 6 characters" required minlength="6" autocomplete="current-password"></div>
+        <p class="form-error" id="formError" role="alert"></p>
+        <button class="btn btn-primary submit-btn" id="authSubmit" type="submit">Sign in</button>
+      </form>
+      <p class="switch-auth" id="switchAuth">New to Akara Joint? <button type="button">Create an account</button></p>
+      <p class="demo-note">Demo mode: sample account <strong>demo@akarajoint.test</strong> / <strong>akara123</strong></p>
+    </section>
+  </div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer-head"><h3>Your bag</h3><button id="closeCart" class="modal-close" aria-label="Close bag">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Your bag is waiting for something delicious.</p></div>
+    <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">₦0</strong></div>
+    <button class="btn btn-primary checkout-btn" id="checkoutButton">Continue to checkout</button>
+    <p class="demo-note">Demo storefront — checkout is not connected to payments.</p>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
